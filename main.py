@@ -14,8 +14,8 @@ add_website_css(
 
 add_website_css(
     ".game-title h1",
-    "font-size: 80px; margin: 0; "
-    "font-weight: bold; line-height: 0.5;"
+    "font-size: 80px !important; margin: 0; "
+    "font-weight: bold; line-height: 0.7;"
 )
 
 
