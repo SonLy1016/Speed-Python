@@ -9,8 +9,13 @@ set_website_title("Speed Python")
 set_website_framed(False)
 add_website_css(
     ".game-title",
-    "text-align: center; font-size: 60px; "
-    "font-weight: bold; line-height: 1.2;"
+    "text-align: center;"
+)
+
+add_website_css(
+    ".game-title h1",
+    "font-size: 60px; margin: 0; "
+    "font-weight: bold; line-height: 1.1;"
 )
 
 
@@ -29,6 +34,15 @@ def index(state: State) -> Page:
         )
     ])
 
-assert_equal(index(State()), Page(State(), ["Speed Python"]))
+assert_equal(
+    index(State()),
+    Page(State(), [
+        Div(
+            Header("Speed", 1),
+            Header("Python", 1),
+            classes=["game-title"]
+        )
+    ])
+)
 
 start_server(State())
