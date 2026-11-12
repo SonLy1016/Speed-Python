@@ -14,10 +14,10 @@ add_website_css(
 
 add_website_css(
     ".game-title h1",
-    "font-size: 80px !important; margin: 0; "
-    "font-weight: bold; line-height: 0.7;"
+    "margin: 0; "
+    "font-weight: bold; "
+    "line-height: 1.0;"
 )
-
 
 @dataclass
 class State:
@@ -28,8 +28,8 @@ class State:
 def index(state: State) -> Page:
     return Page(state, [
         Div(
-            Header("Speed", 1),
-            Header("Python", 1),
+            Header("Speed", 1, style_font_size="80px"),
+            Header("Python", 1, style_font_size="80px"),
             classes=["game-title"]
         )
     ])
@@ -38,8 +38,8 @@ assert_equal(
     index(State()),
     Page(State(), [
         Div(
-            Header("Speed", 1),
-            Header("Python", 1),
+            Header("Speed", 1, style_font_size="80px"),
+            Header("Python", 1, style_font_size="80px"),
             classes=["game-title"]
         )
     ])
