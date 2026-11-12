@@ -28,8 +28,8 @@ class State:
 def index(state: State) -> Page:
     return Page(state, [
         Div(
-            Header("Speed", 1, style_font_size="80px"),
-            Header("Python", 1, style_font_size="80px"),
+            Header("Speed", 1, style_font_size="40px"),
+            Header("Python", 1, style_font_size="40px"),
             classes=["game-title"]
         )
     ])
@@ -38,8 +38,8 @@ assert_equal(
     index(State()),
     Page(State(), [
         Div(
-            Header("Speed", 1, style_font_size="80px"),
-            Header("Python", 1, style_font_size="80px"),
+            Header("Speed", 1, style_font_size="40px"),
+            Header("Python", 1, style_font_size="40px"),
             classes=["game-title"]
         )
     ])
