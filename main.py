@@ -5,7 +5,7 @@ from dataclasses import dataclass
 
 
 hide_debug_information()
-set_website_title("Speed Python")
+set_website_title("Speed" + "\n" + "Python")
 set_website_framed(False)
 
 
