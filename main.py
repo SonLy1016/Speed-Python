@@ -213,7 +213,9 @@ def submit_answer(state: State, answer: str) -> Page:
         state.submitted = True
 
         if answer == current.correct_answer:
-            state.score += 1
+            state.score += 10
+        else:
+            state.score -= 5
 
     return quiz(state)
 
